@@ -521,35 +521,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 18px;
-}
-
-.form-field label {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--text);
-}
-
-.form-field input {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 13px 16px;
-  border-radius: 14px;
-  border: 1.5px solid var(--pink-soft);
-  background: var(--cream);
-  color: var(--text);
-}
-
-.form-field input:focus {
-  outline: none;
-  border-color: var(--cherry);
-}
-
 .form-submit {
   width: 100%;
   text-align: center;
@@ -561,24 +532,6 @@ h1 {
   font-size: 0.85rem;
   color: var(--muted);
   text-align: center;
-}
-
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 20px;
-  border-radius: 16px;
-  background: var(--cherry-light);
-  color: var(--cherry-deep);
-  font-weight: 700;
-}
-
-.form-success.visible {
-  display: block;
-}
-
-.join-form.hidden {
-  display: none;
 }
 
 .join-side {

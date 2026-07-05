@@ -6,7 +6,7 @@
     <title>Join · Babe Club</title>
     <meta
       name="description"
-      content="Join Babe Club — get on the list for upcoming events and community news."
+      content="Join Babe Club — subscribe for upcoming events and community news."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,22 +40,21 @@
       <main>
         <section class="join-layout">
           <div class="join-form-card">
-            <h2>Sign Up</h2>
-            <form id="join-form" class="join-form">
-              <div class="form-field">
-                <label for="name">First name</label>
-                <input type="text" id="name" name="name" required placeholder="Your name" />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="you@email.com" />
-              </div>
-              <button type="submit" class="button button-primary form-submit">Count Me In</button>
-              <p class="form-note">We'll only email you about events and club news — no spam.</p>
-            </form>
-            <div id="join-success" class="form-success">
-              You're on the list! Keep an eye on your inbox 💌
-            </div>
+            <span class="teaser-icon">🍒</span>
+            <h2>Subscribe on Substack</h2>
+            <p class="form-note" style="text-align: left; margin-bottom: 24px;">
+              Our newsletter is where we announce events first, share recaps,
+              and keep the club in the loop between hangs.
+            </p>
+            <a
+              class="button button-primary form-submit"
+              href="https://substack.com/@sbbabeclub?r=58efze&utm_medium=ios"
+              target="_blank"
+              rel="noopener"
+              style="text-align: center;"
+            >
+              Subscribe Now
+            </a>
           </div>
 
           <div class="join-side">
@@ -83,13 +82,5 @@
         </a>
       </footer>
     </div>
-
-    <script>
-      document.getElementById('join-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        this.classList.add('hidden');
-        document.getElementById('join-success').classList.add('visible');
-      });
-    </script>
   </body>
 </html>
