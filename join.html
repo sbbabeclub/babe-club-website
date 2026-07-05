@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join · Babe Club</title>
+    <meta
+      name="description"
+      content="Join Babe Club — get on the list for upcoming events and community news."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Babe Club</a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="join.html" class="nav-link nav-link-cta active">Join</a>
+        </div>
+      </nav>
+
+      <header class="page-banner page-banner-red">
+        <p class="eyebrow">Get on the list</p>
+        <h1>Join Babe Club</h1>
+        <p class="tagline">
+          Be the first to know about upcoming hangs, drops, and everything
+          in between.
+        </p>
+      </header>
+
+      <main>
+        <section class="join-layout">
+          <div class="join-form-card">
+            <h2>Sign Up</h2>
+            <form id="join-form" class="join-form">
+              <div class="form-field">
+                <label for="name">First name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@email.com" />
+              </div>
+              <button type="submit" class="button button-primary form-submit">Count Me In</button>
+              <p class="form-note">We'll only email you about events and club news — no spam.</p>
+            </form>
+            <div id="join-success" class="form-success">
+              You're on the list! Keep an eye on your inbox 💌
+            </div>
+          </div>
+
+          <div class="join-side">
+            <h3>Prefer Instagram?</h3>
+            <p>
+              Follow along there for real-time updates, RSVPs, and a look at
+              what Babe Club is all about before you commit.
+            </p>
+            <a
+              class="join-side-ig"
+              href="https://www.instagram.com/sb.babeclub"
+              target="_blank"
+              rel="noopener"
+            >
+              @sb.babeclub →
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Babe Club © 2026</p>
+        <a href="https://www.instagram.com/sb.babeclub" target="_blank" rel="noopener">
+          Instagram · @sb.babeclub
+        </a>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('join-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        this.classList.add('hidden');
+        document.getElementById('join-success').classList.add('visible');
+      });
+    </script>
+  </body>
+</html>
