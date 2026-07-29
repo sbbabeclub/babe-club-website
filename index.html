@@ -72,10 +72,16 @@
 
   /* HERO */
   .hero{ position:relative; padding: 90px 0 70px; overflow:hidden; }
+  .hero-inner{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap:48px; align-items:center; }
+  .hero-visual{ display:flex; justify-content:center; }
   .hero h1{ font-size: clamp(40px, 5.6vw, 68px); margin-bottom: 22px; }
   .hero p.lede{ font-size: 18.5px; color: var(--mocha-soft); max-width: 460px; margin-bottom: 32px; }
   .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 28px; }
   .hero-note{ font-size: 13.5px; color: var(--mocha-soft); font-weight:600; }
+  @media (max-width: 860px){
+    .hero-inner{ grid-template-columns:1fr; }
+    .hero-visual{ margin-top:36px; }
+  }
   .hero-note strong{ color: var(--rose-deep); }
 
   .stack-card{
@@ -169,10 +175,7 @@
   .join-step p{ color: var(--mocha-soft); font-size:12.5px; line-height:1.4; }
   @media (max-width: 640px){ .join-strip{ flex-direction:column; } }
 
-  /* APP + PHONE MOCKUP */
-  .app-inner{ display:grid; grid-template-columns: 1fr 0.85fr; gap:56px; align-items:center; }
-  .app-copy .section-head{ margin-bottom: 32px; }
-  .app-visual{ position:relative; }
+  /* PHONE MOCKUP */
   .form-row{ display:flex; gap:12px; max-width: 440px; flex-wrap:wrap; }
   .form-row input[type=email]{
     flex:1; min-width:200px; padding: 15px 20px; border-radius: 999px; border:2px solid var(--mocha);
@@ -245,7 +248,6 @@
     80%, 100%{ transform: translateY(-520px); }
   }
   @media (prefers-reduced-motion: reduce){ .phone-scroll{ animation: none; } }
-  @media (max-width: 860px){ .app-inner{ grid-template-columns:1fr; } .phone{ margin-top: 30px; } }
 
   .spark-red{ color: var(--logo-red); }
 
@@ -316,7 +318,7 @@
 </div>
 
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-inner">
     <div>
       <span class="eyebrow">santa barbara's social club</span>
       <h1>The future is offline.</h1>
@@ -327,170 +329,7 @@
       </div>
       <p class="hero-note">Follow <strong>@sb.babeclub</strong> for our next event</p>
     </div>
-  </div>
-</section>
-
-<section class="section section-tint" id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">why Babe Club</span>
-      <h2>Girlhood shouldn't be someone's someday.</h2>
-      <p>We build the rooms women actually want to walk into — so friendship, wellness, and real connection stop living in your notes app and start living on your calendar.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <span class="tag-icon">social</span>
-        <h3>Social events</h3>
-        <p>Girls' nights, themed parties, and get-togethers built to turn "we should hang out" into an actual plan on the calendar.</p>
-      </div>
-      <div class="pillar">
-        <span class="tag-icon">wellness</span>
-        <h3>Wellness meetups</h3>
-        <p>Pilates, wellness mornings, and low-key ways to take care of yourself alongside women who get it.</p>
-      </div>
-      <div class="pillar">
-        <span class="tag-icon">networking</span>
-        <h3>Business networking</h3>
-        <p>Real connections with women building their own thing — no stiff mixers, just genuine, useful relationships.</p>
-      </div>
-    </div>
-    <p class="cherry-line">At the end of the day, it's girlhood, with a <span class="word-red">cherry</span> on top.</p>
-  </div>
-</section>
-
-<section class="section" id="week" style="padding-bottom:40px;">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">upcoming</span>
-      <h2>What's on the calendar.</h2>
-      <p>A few of the plans happening around the club right now.</p>
-    </div>
-    <div class="week-grid">
-      <div class="ticket week-card">
-        <span class="tag">relationships</span>
-        <h3>Unhinged Dating: A Relationship Therapist Q&amp;A</h3>
-        <div class="ticket-meta">
-          <div><span class="dot"></span>Mon, Aug 3</div>
-        </div>
-        <p class="week-note">Have a question for our relationship therapist? Ask anonymously. (Some questions may be featured on our upcoming podcast — stay tuned!)</p>
-        <a href="https://ngl.link/sb.babeclub" class="btn btn-dark" target="_blank" rel="noopener">Ask Question</a>
-      </div>
-      <div class="ticket week-card">
-        <span class="tag">romance</span>
-        <h3>Godmothers: An Evening with Zan Romanoff</h3>
-        <div class="ticket-meta">
-          <div><span class="dot"></span>Sat, Aug 29 · 6:00 PM</div>
-          <div><span class="dot"></span>DM "LOVE" on IG for 50% off the opening act</div>
-        </div>
-        <span class="app-tag">10 spots only</span>
-        <a href="https://godmothers.com/products/godmothers-gather-zan-romanoff" class="btn btn-dark" target="_blank" rel="noopener">RSVP</a>
-      </div>
-      <div class="ticket week-card">
-        <span class="tag">wellness</span>
-        <h3>Puppies &amp; Pilates</h3>
-        <div class="ticket-meta">
-          <div><span class="dot"></span>Sat, Sep 19 · 10:00–12:00 PM</div>
-          <div><span class="dot"></span>Paseo Nuevo</div>
-        </div>
-        <span class="app-tag">More details soon</span>
-        <a href="https://instagram.com/sb.babeclub" class="btn btn-dark" target="_blank" rel="noopener">Follow for updates</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="chapters-teaser">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Babe Club chapters</span>
-      <h2>One chapter at a time. 🍒</h2>
-      <p>Every month gets a new theme — and the events, people, and conversations that come with it.</p>
-    </div>
-    <div class="ticket chapter-card">
-      <span class="tag">august</span>
-      <h3>Love &amp; Relationships</h3>
-      <div class="ticket-meta chapter-events">
-        <div><span class="dot"></span>Unhinged Dating: a relationship therapist Q&amp;A — Aug 3</div>
-        <div><span class="dot"></span>Godmothers: an evening with Zan Romanoff — Aug 29</div>
-      </div>
-      <a href="chapters.html" class="btn btn-primary">Theme of the Month →</a>
-    </div>
-    <div class="join-strip">
-      <div class="join-step">
-        <span class="join-step-num">1</span>
-        <div>
-          <h4>Join the waitlist</h4>
-          <p>Get access to the app the moment it's live.</p>
-        </div>
-      </div>
-      <div class="join-step">
-        <span class="join-step-num">2</span>
-        <div>
-          <h4>RSVP to your first event</h4>
-          <p>Show up whenever the plan is right for you.</p>
-        </div>
-      </div>
-      <div class="join-step">
-        <span class="join-step-num">3</span>
-        <div>
-          <h4>Show up, meet your babes</h4>
-          <p>That's it — you're in.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section waitlist" id="app" style="padding-bottom:60px;">
-  <div class="wrap app-inner">
-    <div class="app-copy">
-      <div class="section-head">
-        <span class="eyebrow">the Babe Club app</span>
-        <h2>Your friend group's new home base is coming.</h2>
-        <p>RSVPs, plans, and your Babe Club people — all in one place. Be first in when it opens.</p>
-      </div>
-      <div style="max-width:480px; width:100%;">
-        <div id="mlb2-44285624" class="ml-form-embedContainer babe-ml-embed">
-          <div class="ml-form-embedWrapper embedForm">
-            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2543443/forms/194366883137324142/subscribe" data-code="" method="post" target="ml-hidden-frame">
-                <div class="ml-form-formContent">
-                  <div class="ml-form-fieldRow ml-last-item">
-                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Type your email..." autocomplete="email">
-                    </div>
-                  </div>
-                </div>
-                <div class="ml-form-embedPermissions">
-                  <div class="ml-form-embedPermissionsContent default privacy-policy">
-                    <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
-                  </div>
-                </div>
-                <div class="ml-form-recaptcha ml-validate-required">
-                  <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-                </div>
-                <input type="hidden" name="ml-submit" value="1">
-                <div class="ml-form-embedSubmit">
-                  <button type="submit" class="primary">Subscribe</button>
-                  <button disabled="disabled" style="display: none;" type="button" class="loading">
-                    <div class="ml-form-embedSubmitLoad"></div>
-                    <span class="sr-only">Loading...</span>
-                  </button>
-                </div>
-                <input type="hidden" name="anticsrf" value="true">
-              </form>
-            </div>
-            <div class="ml-form-successBody row-success" style="display: none">
-              <div class="ml-form-successContent">
-                <p>You have successfully joined our subscriber list.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="form-note">No spam, ever — just plans worth showing up for.</p>
-    </div>
-    <div class="app-visual">
+    <div class="hero-visual">
       <div class="phone" role="img" aria-label="Preview of the Babe Club app scrolling through upcoming events">
         <div class="phone-screen">
           <div class="phone-scroll">
@@ -538,11 +377,172 @@
   </div>
 </section>
 
+<section class="section" id="week" style="padding-bottom:40px;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">upcoming</span>
+      <h2>What's on the calendar.</h2>
+      <p>A few of the plans happening around the club right now.</p>
+    </div>
+    <div class="week-grid">
+      <div class="ticket week-card">
+        <span class="tag">relationships</span>
+        <h3>Unhinged Dating: A Relationship Therapist Q&amp;A</h3>
+        <div class="ticket-meta">
+          <div><span class="dot"></span>Mon, Aug 3</div>
+        </div>
+        <p class="week-note">Have a question for our relationship therapist? Ask anonymously. (Some questions may be featured on our upcoming podcast — stay tuned!)</p>
+        <a href="https://ngl.link/sb.babeclub" class="btn btn-dark" target="_blank" rel="noopener">Ask Question</a>
+      </div>
+      <div class="ticket week-card">
+        <span class="tag">romance</span>
+        <h3>Godmothers: An Evening with Zan Romanoff</h3>
+        <div class="ticket-meta">
+          <div><span class="dot"></span>Sat, Aug 29 · 6:00 PM</div>
+          <div><span class="dot"></span>DM "LOVE" on IG for 50% off the opening act</div>
+        </div>
+        <span class="app-tag">10 spots only</span>
+        <a href="https://godmothers.com/products/godmothers-gather-zan-romanoff" class="btn btn-dark" target="_blank" rel="noopener">RSVP</a>
+      </div>
+      <div class="ticket week-card">
+        <span class="tag">wellness</span>
+        <h3>Puppies &amp; Pilates</h3>
+        <div class="ticket-meta">
+          <div><span class="dot"></span>Sat, Sep 19 · 10:00–12:00 PM</div>
+          <div><span class="dot"></span>Paseo Nuevo</div>
+        </div>
+        <span class="app-tag">More details soon</span>
+        <a href="https://instagram.com/sb.babeclub" class="btn btn-dark" target="_blank" rel="noopener">Follow for updates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">why Babe Club</span>
+      <h2>You deserve more than the same Friday night, on repeat.</h2>
+      <p>Babe Club started because making friends as an adult is harder than anyone admits, and this town has more going on than you'd think. We plan the events, find the local partnerships, and make sure you're always in the loop. All you have to do is show up.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="tag-icon">social</span>
+        <h3>Social events</h3>
+        <p>Girls' nights, themed parties, and get-togethers built to turn "we should hang out" into an actual plan on the calendar.</p>
+      </div>
+      <div class="pillar">
+        <span class="tag-icon">wellness</span>
+        <h3>Wellness meetups</h3>
+        <p>Pilates, wellness mornings, and low-key ways to take care of yourself alongside women who get it.</p>
+      </div>
+      <div class="pillar">
+        <span class="tag-icon">networking</span>
+        <h3>Business networking</h3>
+        <p>Real connections with women building their own thing — no stiff mixers, just genuine, useful relationships.</p>
+      </div>
+    </div>
+    <p class="cherry-line">At the end of the day, it's girlhood, with a <span class="word-red">cherry</span> on top.</p>
+  </div>
+</section>
+
+<section class="section" id="chapters-teaser">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Babe Club chapters</span>
+      <h2>One chapter at a time. 🍒</h2>
+      <p>Every month gets a new theme — and the events, people, and conversations that come with it.</p>
+    </div>
+    <div class="ticket chapter-card">
+      <span class="tag">august</span>
+      <h3>Love &amp; Relationships</h3>
+      <div class="ticket-meta chapter-events">
+        <div><span class="dot"></span>Unhinged Dating: a relationship therapist Q&amp;A — Aug 3</div>
+        <div><span class="dot"></span>Godmothers: an evening with Zan Romanoff — Aug 29</div>
+      </div>
+      <a href="chapters.html" class="btn btn-primary">Theme of the Month →</a>
+    </div>
+    <div class="join-strip">
+      <div class="join-step">
+        <span class="join-step-num">1</span>
+        <div>
+          <h4>Join the waitlist</h4>
+          <p>Get access to the app the moment it's live.</p>
+        </div>
+      </div>
+      <div class="join-step">
+        <span class="join-step-num">2</span>
+        <div>
+          <h4>RSVP to your first event</h4>
+          <p>Show up whenever the plan is right for you.</p>
+        </div>
+      </div>
+      <div class="join-step">
+        <span class="join-step-num">3</span>
+        <div>
+          <h4>Show up, meet your babes</h4>
+          <p>That's it — you're in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="final-cta section">
   <div class="wrap">
     <h2>Your people are waiting, babe.</h2>
     <p class="cherry-line">Girlhood, with a cherry on top. 🍒</p>
     <a href="membership.html" class="btn btn-primary" style="font-size:16px; padding:17px 34px;">Become a Member <span class="spark-red">✦</span></a>
+  </div>
+</section>
+
+<section class="section waitlist" id="app">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">the Babe Club app</span>
+      <h2>Your friend group's new home base is coming.</h2>
+      <p>RSVPs, plans, and your Babe Club people — all in one place. Be first in when it opens.</p>
+    </div>
+    <div style="max-width:440px; margin:0 auto;">
+      <div id="mlb2-44285624" class="ml-form-embedContainer babe-ml-embed">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2543443/forms/194366883137324142/subscribe" data-code="" method="post" target="ml-hidden-frame">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Type your email..." autocomplete="email">
+                  </div>
+                </div>
+              </div>
+              <div class="ml-form-embedPermissions">
+                <div class="ml-form-embedPermissionsContent default privacy-policy">
+                  <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+                </div>
+              </div>
+              <div class="ml-form-recaptcha ml-validate-required">
+                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="primary">Subscribe</button>
+                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display: none">
+            <div class="ml-form-successContent">
+              <p>You have successfully joined our subscriber list.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="form-note" style="text-align:center;">No spam, ever — just plans worth showing up for.</p>
+    </div>
   </div>
 </section>
 
