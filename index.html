@@ -161,7 +161,7 @@
   .event-copy p{ color: var(--mocha-soft); font-size:17px; margin-bottom:26px; max-width:460px; }
   @media (max-width: 860px){ .event-inner{ grid-template-columns:1fr; } .ticket::before,.ticket::after{ display:none; } }
 
-  /* THIS WEEK'S EVENTS */
+  /* WHAT'S ON THE CALENDAR */
   .week-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:28px; }
   .week-card{ display:flex; flex-direction:column; padding:28px; }
   .week-card::before, .week-card::after{ display:none; }
@@ -170,6 +170,10 @@
   .week-card .app-tag{ align-self:flex-start; margin-bottom:18px; }
   .week-card .btn{ align-self:flex-start; padding:10px 22px; font-size:14px; }
   @media (max-width: 860px){ .week-grid{ grid-template-columns:1fr; } }
+
+  /* FOLLOW ALONG */
+  .follow-cta{ text-align:center; }
+  .follow-cta .btn{ margin-top:6px; }
 
   /* APP + PHONE MOCKUP */
   .app-inner{ display:grid; grid-template-columns: 1fr 0.85fr; gap:56px; align-items:center; }
@@ -318,13 +322,13 @@
 <section class="section" id="week" style="padding-bottom:40px;">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">this week</span>
+      <span class="eyebrow">upcoming</span>
       <h2>What's on the calendar.</h2>
       <p>A few of the plans happening around the club right now.</p>
     </div>
     <div class="week-grid">
       <div class="ticket week-card">
-        <span class="tag">this week</span>
+        <span class="tag">wellness</span>
         <h3>Wellness morning: Pilates + coffee</h3>
         <div class="ticket-meta">
           <div><span class="dot"></span>Sat, 9:00 AM</div>
@@ -407,6 +411,17 @@
         <h3>Show up, meet your babes</h3>
         <p>That's it — you're in.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center follow-cta">
+      <span class="eyebrow">follow along</span>
+      <h2>@sb.babeclub</h2>
+      <p>See the latest from the club before it hits the app.</p>
+      <a href="https://instagram.com/sb.babeclub" class="btn btn-primary" target="_blank" rel="noopener">Follow on Instagram <span class="spark-red">✦</span></a>
     </div>
   </div>
 </section>
