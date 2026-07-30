@@ -59,16 +59,17 @@
   /* NAV */
   header{ position: sticky; top:0; z-index: 50; background: rgba(251,245,239,0.92); backdrop-filter: blur(6px); border-bottom: 1.5px solid var(--line); }
   nav.wrap{ display:flex; align-items:center; justify-content:space-between; padding-top: 14px; padding-bottom: 14px; }
-  .logo-mark{ display:flex; align-items:center; gap:6px; }
-  .logo-mark img{ height: 42px; width:auto; display:block; }
+  .logo-mark{ display:flex; align-items:center; gap:6px; flex-shrink:0; }
+  .logo-mark img{ height: 42px; width:auto; display:block; flex-shrink:0; }
   .logo-mark.footer-logo img{ height: 32px; }
   .nav-links{ display:flex; align-items:center; gap: 32px; font-weight: 600; font-size: 14.5px; }
   .nav-links a{ opacity:.8; transition: opacity .15s; }
   .nav-links a:hover{ opacity:1; }
-  .nav-cta{ display:flex; align-items:center; gap:18px; }
-  .menu-btn{ display:none; background:none; border:none; font-size:26px; cursor:pointer; color:var(--mocha); }
+  .nav-cta{ display:flex; align-items:center; gap:18px; flex-shrink:1; min-width:0; }
+  .menu-btn{ display:none; background:none; border:none; font-size:26px; cursor:pointer; color:var(--mocha); flex-shrink:0; }
 
   @media (max-width: 860px){ .nav-links{ display:none; } .menu-btn{ display:block; } }
+  @media (max-width: 480px){ .nav-cta .btn-ghost{ display:none; } .nav-cta{ gap:10px; } }
 
   /* HERO */
   .hero{ position:relative; padding: 90px 0 70px; overflow:hidden; }
@@ -325,7 +326,7 @@
       <p class="lede">Social events. Wellness meetups. Real networking. All IRL, all for the babes.</p>
       <div class="hero-actions">
         <a href="membership.html" class="btn btn-primary">Become a Member <span class="spark-red">✦</span></a>
-        <a href="https://instagram.com/sb.babeclub" class="btn btn-ghost" target="_blank" rel="noopener">See what's next</a>
+        <a href="#week" class="btn btn-ghost">See what's next</a>
       </div>
       <p class="hero-note">Follow <strong>@sb.babeclub</strong> for our next event</p>
     </div>
