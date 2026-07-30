@@ -74,7 +74,7 @@
   /* HERO */
   .hero{ position:relative; padding: 90px 0 70px; overflow:hidden; }
   .hero-inner{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap:48px; align-items:center; }
-  .hero-visual{ display:flex; justify-content:center; }
+  .hero-visual{ display:flex; flex-direction:column; align-items:center; }
   .hero h1{ font-size: clamp(40px, 5.6vw, 68px); margin-bottom: 22px; }
   .hero p.lede{ font-size: 18.5px; color: var(--mocha-soft); max-width: 460px; margin-bottom: 32px; }
   .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 28px; }
@@ -237,16 +237,17 @@
     background: var(--mocha); border-radius: 0 0 14px 14px; z-index:5;
   }
   .phone-screen{ position:relative; width:100%; height:100%; overflow:hidden; background: var(--cream-deep); }
-  .phone-scroll{ position:absolute; top:0; left:0; width:100%; animation: phoneScroll 12s ease-in-out infinite; }
+  .phone-scroll{ position:absolute; top:0; left:0; width:100%; animation: phoneScroll 16s ease-in-out infinite; }
   .app-card{ margin: 14px 12px; padding: 16px; background: var(--white); border:1.5px solid var(--line); border-radius: 14px; }
   .app-card .app-eyebrow{ font-size:11px; font-weight:700; color: var(--rose-deep); text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
   .app-card h4{ font-family: var(--font-display); font-size:14.5px; font-weight:600; margin-bottom:4px; }
   .app-card p{ font-size:12px; color: var(--mocha-soft); }
   .app-card .app-tag{ display:inline-block; margin-top:8px; background: var(--butter); color: var(--mocha); font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; }
   @keyframes phoneScroll{
-    0%, 15%{ transform: translateY(0); }
-    40%, 55%{ transform: translateY(-260px); }
-    80%, 100%{ transform: translateY(-520px); }
+    0%, 8%{ transform: translateY(0); }
+    25%, 33%{ transform: translateY(-260px); }
+    50%, 58%{ transform: translateY(-520px); }
+    75%, 100%{ transform: translateY(-780px); }
   }
   @media (prefers-reduced-motion: reduce){ .phone-scroll{ animation: none; } }
 
@@ -341,10 +342,22 @@
               <span class="app-tag">4 spots left</span>
             </div>
             <div class="app-card">
+              <div class="app-eyebrow">Member Perk 🎁</div>
+              <h4>20% off at a local café</h4>
+              <p>Sample perk — final offers may vary</p>
+              <span class="app-tag">Exclusive</span>
+            </div>
+            <div class="app-card">
               <div class="app-eyebrow">Girls' night</div>
               <h4>Wine tasting on State St</h4>
               <p>Thu, 6:30 PM · Funk Zone</p>
               <span class="app-tag">RSVP'd</span>
+            </div>
+            <div class="app-card">
+              <div class="app-eyebrow">Local Partner 🤝</div>
+              <h4>Exclusive deals with Santa Barbara favorites</h4>
+              <p>Coming soon</p>
+              <span class="app-tag">Preview</span>
             </div>
             <div class="app-card">
               <div class="app-eyebrow">Networking</div>
@@ -353,10 +366,10 @@
               <span class="app-tag">New</span>
             </div>
             <div class="app-card">
-              <div class="app-eyebrow">Coming up</div>
-              <h4>Beach bonfire + s'mores</h4>
-              <p>Fri, 7:00 PM · Butterfly Beach</p>
-              <span class="app-tag">Selling fast</span>
+              <div class="app-eyebrow">Meet Your Babes 👋</div>
+              <h4>Swipe to find your people</h4>
+              <p>Coming soon to the app</p>
+              <span class="app-tag">Preview</span>
             </div>
             <div class="app-card">
               <div class="app-eyebrow">This week</div>
@@ -365,10 +378,10 @@
               <span class="app-tag">4 spots left</span>
             </div>
             <div class="app-card">
-              <div class="app-eyebrow">Girls' night</div>
-              <h4>Wine tasting on State St</h4>
-              <p>Thu, 6:30 PM · Funk Zone</p>
-              <span class="app-tag">RSVP'd</span>
+              <div class="app-eyebrow">Member Perk 🎁</div>
+              <h4>20% off at a local café</h4>
+              <p>Sample perk — final offers may vary</p>
+              <span class="app-tag">Exclusive</span>
             </div>
           </div>
         </div>
@@ -553,6 +566,7 @@
     <div class="foot-links">
       <a href="https://instagram.com/sb.babeclub">Instagram</a>
       <a href="#app">The App</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
     <div class="foot-copy">© 2026 Babe Club LLC · Santa Barbara, CA</div>
   </div>
