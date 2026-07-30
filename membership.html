@@ -75,6 +75,48 @@
   .placeholder-card h2{ font-size:24px; margin-bottom:14px; }
   .placeholder-card p{ color: var(--mocha-soft); font-size:16px; margin-bottom:24px; }
 
+  /* MailerLite embed, restyled to match the site (MailerLite's own default CSS is not loaded) */
+  .babe-ml-embed{ width:100% !important; max-width:440px; }
+  .babe-ml-embed .ml-form-embedWrapper{ background:transparent; border:none; box-shadow:none; width:100% !important; }
+  .babe-ml-embed .ml-form-embedBody{ padding:0; }
+  .babe-ml-embed form.ml-block-form{ display:flex; flex-wrap:wrap; gap:12px; align-items:flex-start; width:100%; }
+  .babe-ml-embed .ml-form-formContent{ order:1; flex:1; min-width:200px; margin:0; width:auto; }
+  .babe-ml-embed .ml-form-fieldRow{ margin:0; width:100%; }
+  .babe-ml-embed .ml-field-group input[type=email]{
+    width:100%; box-sizing:border-box; padding:15px 20px; border-radius:999px; border:2px solid var(--mocha);
+    font-family: var(--font-body); font-size:15px; background: var(--white); color: var(--mocha);
+  }
+  .babe-ml-embed .ml-field-group input[type=email]:focus{ outline: 3px solid var(--butter-deep); outline-offset: 2px; }
+  .babe-ml-embed .ml-field-group input[type=email]::placeholder{ color: var(--mocha-soft); opacity:1; }
+  .babe-ml-embed .ml-form-embedSubmit{ order:2; margin:0; width:auto; float:none; }
+  .babe-ml-embed .ml-form-embedSubmit button.primary{
+    display:inline-flex; align-items:center; gap:8px; font-family: var(--font-body); font-weight:700; font-size:15px;
+    padding:15px 26px; border-radius:999px; border:2px solid var(--mocha); background: var(--rose); color: var(--mocha);
+    cursor:pointer; transition: transform .15s ease, box-shadow .15s ease; width:auto; height:auto;
+  }
+  .babe-ml-embed .ml-form-embedSubmit button.primary:hover{ transform: translateY(-2px) rotate(-1deg); box-shadow: 4px 5px 0 var(--mocha); }
+  .babe-ml-embed .ml-form-embedSubmit button.loading{ background:transparent; border:none; padding:14px; width:auto; }
+  .babe-ml-embed .ml-form-embedSubmitLoad{ display:inline-block; width:20px; height:20px; }
+  .babe-ml-embed .ml-form-embedSubmitLoad:after{
+    content:""; display:block; width:16px; height:16px; margin:2px; border-radius:50%;
+    border:3px solid var(--mocha); border-color: var(--mocha) var(--mocha) var(--mocha) transparent;
+    animation: babeMlSpin 1s linear infinite;
+  }
+  @keyframes babeMlSpin{ to{ transform: rotate(360deg); } }
+  .babe-ml-embed .ml-form-embedPermissions{ order:3; flex-basis:100%; margin-top:2px; }
+  .babe-ml-embed .ml-form-embedPermissions p{ color: var(--mocha-soft); font-size:13px; line-height:1.5; margin:0; font-family: var(--font-body); }
+  .babe-ml-embed .ml-form-embedPermissions p a{ color: var(--rose-deep); text-decoration: underline; }
+  .babe-ml-embed .ml-form-recaptcha{ order:4; flex-basis:100%; margin:6px 0 0; float:none !important; }
+  .babe-ml-embed .ml-form-successBody{ padding:0; }
+  .babe-ml-embed .ml-form-successContent p{ font-family: var(--font-body); font-weight:700; color: var(--rose-deep); font-size:16px; margin:0; }
+  .babe-ml-embed .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  @media (max-width:480px){
+    .babe-ml-embed form.ml-block-form{ flex-direction:column; }
+    .babe-ml-embed .ml-form-embedSubmit,
+    .babe-ml-embed .ml-form-embedSubmit button.primary{ width:100%; justify-content:center; }
+    .babe-ml-embed .g-recaptcha{ transform:scale(0.85); transform-origin:0 0; }
+  }
+
   footer{ padding: 48px 0 40px; border-top:1.5px solid var(--line); }
   .foot-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
   .foot-links{ display:flex; gap:24px; font-weight:600; font-size:14px; }
@@ -115,6 +157,48 @@
       <p>We're putting the finishing touches on membership. In the meantime, follow along on Instagram and we'll let you know the second it opens.</p>
       <a href="https://instagram.com/sb.babeclub" class="btn btn-primary" target="_blank" rel="noopener">Follow @sb.babeclub <span class="spark-red">✦</span></a>
     </div>
+
+    <div class="placeholder-card" style="margin-top:24px;">
+      <h2>Get on the waitlist</h2>
+      <p>Membership signup is launching soon — in the meantime, get on the waitlist for the Babe Club app so you're first to know when everything opens up.</p>
+      <div id="mlb2-44285624-membership" class="ml-form-embedContainer babe-ml-embed">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2543443/forms/194366883137324142/subscribe" data-code="" method="post" target="ml-hidden-frame">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Type your email..." autocomplete="email">
+                  </div>
+                </div>
+              </div>
+              <div class="ml-form-embedPermissions">
+                <div class="ml-form-embedPermissionsContent default privacy-policy">
+                  <p>You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
+                </div>
+              </div>
+              <div class="ml-form-recaptcha ml-validate-required">
+                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="primary">Subscribe</button>
+                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display: none">
+            <div class="ml-form-successContent">
+              <p>You have successfully joined our subscriber list.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -129,6 +213,45 @@
     <div class="foot-copy">© 2026 Babe Club LLC · Santa Barbara, CA</div>
   </div>
 </footer>
+
+<iframe name="ml-hidden-frame" style="display:none;" aria-hidden="true" tabindex="-1"></iframe>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2543443/forms/194366883137324142/takel")
+</script>
+<script>
+  // Real submission goes to the hidden iframe above (no popup blockers, no blank-tab JSON).
+  // We drive the same-tab redirect ourselves rather than depending on MailerLite's
+  // async widget JS to call a per-instance success callback.
+  var mlForms = document.querySelectorAll('.babe-ml-embed form.ml-block-form');
+  mlForms.forEach(function (form, formIndex) {
+    form.addEventListener('submit', function (e) {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity();
+        return;
+      }
+      var recaptchaOk = true;
+      if (form.querySelector('.g-recaptcha') && window.grecaptcha) {
+        try {
+          recaptchaOk = !!grecaptcha.getResponse(formIndex);
+        } catch (err) {
+          recaptchaOk = true;
+        }
+      }
+      if (!recaptchaOk) {
+        e.preventDefault();
+        alert('Please complete the reCAPTCHA before subscribing.');
+        return;
+      }
+      setTimeout(function () {
+        window.location.href = 'welcome.html';
+      }, 400);
+    });
+  });
+</script>
 
 </body>
 </html>
