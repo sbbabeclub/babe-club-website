@@ -158,7 +158,20 @@
   .week-card .app-tag{ align-self:flex-start; margin-bottom:18px; }
   .week-card .btn{ align-self:flex-start; padding:10px 22px; font-size:14px; }
   .week-card .week-note{ color: var(--mocha-soft); font-size:13.5px; line-height:1.55; margin:0 0 16px; }
-  @media (max-width: 860px){ .week-grid{ grid-template-columns:1fr; } }
+  @media (max-width: 860px){
+    .week-grid{
+      display:flex;
+      grid-template-columns:unset;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      padding-bottom:6px;
+    }
+    .week-grid::-webkit-scrollbar{ display:none; }
+    .week-grid .week-card{ flex:0 0 82%; scroll-snap-align:center; }
+  }
+  @media (max-width: 480px){ .week-grid .week-card{ flex-basis:88%; } }
 
   /* CHAPTERS TEASER */
   .chapter-card{ max-width:640px; }
@@ -400,6 +413,16 @@
     </div>
     <div class="week-grid">
       <div class="ticket week-card">
+        <span class="tag">wellness</span>
+        <h3>FS8 Pilates X Babe Club</h3>
+        <div class="ticket-meta">
+          <div><span class="dot"></span>Sat, Aug 15 · 12:15 PM</div>
+          <div><span class="dot"></span>$10 class</div>
+        </div>
+        <span class="app-tag">22 spots only</span>
+        <a href="https://luma.com/yv4jvopj" class="btn btn-dark" target="_blank" rel="noopener">RSVP</a>
+      </div>
+      <div class="ticket week-card">
         <span class="tag">relationships</span>
         <h3>Unhinged Dating: A Relationship Therapist Q&amp;A</h3>
         <div class="ticket-meta">
@@ -420,13 +443,13 @@
       </div>
       <div class="ticket week-card">
         <span class="tag">wellness</span>
-        <h3>FS8 Pilates X Babe Club</h3>
+        <h3>Puppies &amp; Pilates</h3>
         <div class="ticket-meta">
-          <div><span class="dot"></span>Sat, Aug 15 · 12:15 PM</div>
-          <div><span class="dot"></span>$10 class</div>
+          <div><span class="dot"></span>Sat, Sep 19 · 10:00–12:00 PM</div>
+          <div><span class="dot"></span>Paseo Nuevo</div>
         </div>
-        <span class="app-tag">22 spots only</span>
-        <a href="https://luma.com/yv4jvopj" class="btn btn-dark" target="_blank" rel="noopener">RSVP</a>
+        <span class="app-tag">More details soon</span>
+        <a href="https://instagram.com/sb.babeclub" class="btn btn-dark" target="_blank" rel="noopener">Follow for updates</a>
       </div>
     </div>
   </div>
